@@ -1,12 +1,90 @@
-*.class
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.Component;
+import java.awt.Dimension;
+import java.awt.FlowLayout;
+import java.awt.Font;
+import java.awt.Panel;
+import java.awt.Toolkit;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
+import javax.swing.AbstractButton;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextArea;
 
-# Package Files #
-*.jar
-*.war
-*.ear
 
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
+
+public class John_GeneratorWinow {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		JFrame frame = new JFrame("John Generator: Saif Edition");
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		JPanel panel = new JPanel();
+		
+		JButton button = new JButton();		  
+		button.setText("Next John");
+		
+		JLabel label = new JLabel("	Welcome to The John Generator!	");
+		  
+		panel.setLayout(new FlowLayout(FlowLayout.CENTER));
+		
+		
+		
+		
+	  		  
+		
+		
+		button.setLocation(20, 71);
+	    button.setPreferredSize(new Dimension(150, 40));
+	    panel.setLocation(12, 371);
+	    panel.setPreferredSize(new Dimension(116, 400));				
+		panel.add(label);	
+		panel.setBackground(new Color(0x222222));
+		
+		
+		
+		panel.add(label);	
+		panel.add(button);		  		   		  
+		frame.add(panel);		  
+		frame.setSize(500, 250);		  
+		frame.setLocationRelativeTo(null);	  
+		frame.setVisible(true);
+		
+		
+		Font font = new Font("Consolas", Font.BOLD, 11);
+		label.setFont(font);
+		label.setForeground(Color.white);
+		
+		
+		JButton showDialogButton = new JButton("Text Button");
+		button.addActionListener(new ActionListener()
+		{
+		  public void actionPerformed(ActionEvent e)
+		  {
+			  String[] noun={"my mom","his grab box","Japan","Zer0","Reddit","Metaknight","they","my wii u","reggie fils-aime","my controller","the crowd","my butt","the TV","my chair","my left pinkey","Donald Trump","my dad","the announcer","Sonic","Montey","my shirt","John Cena","Valve","King Dedede","Samus","For Glory","Diddy Kong","Dinkle Berg","my 3ds","Jay Leno","Little Mac","my chin","by brain"};
+			  
+	          String[] adjective={"was better than me","had a homerun bat","picked poke floats","spammed b","started singing","was staring at me","Spammed the c-stick","was jumping too much","was too small","had diarrhea","Wario wafted","was poking me","was tickling my toes","had too much end lag","is op","walked infront of the screen","started cramping","did a ken combo on me","shaved my head","called me fat",
+	        		  "was talking trash about my cat","bribed me with nachos","can't count to 3","stage spiked me","walked up and down smashed","didn't do his thumb exersices","had small pox","made werid sounds in my ear","was camping","unpluged my controller","rest killed me","did the cupid shuffle","gave me a wedgie","played random","spiked me","had sick skills","kidnapped me","got in my eyes"
+	        		  ,"was too bright","counter spammed","was listening to eye of the tiger","booed me off stage","kept on taunting"};
+
+	         
+	          int random = (int)(Math.random()*Math.random()*noun.length);
+			  int random2=(int)(Math.random()*Math.random()*adjective.length);
+
+	          
+				label.setText("          I only lost because "  + noun[random] +" "+ adjective[random2] +"             ") ;}
+		  });
+		
+		};
+          
+        
+	
+
+}
